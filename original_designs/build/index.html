@@ -5,9 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Royal Porters</title>
 
+    <!-- TITLE -->
     <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/a9cdceb046.js" crossorigin="anonymous"></script>
 </head>
 <body class="min-h-screen bg-primary font-Poppins">
-    <h1 class="">Hello There</h1>
+    <!-- Navigation Bar -->
+    <div class="sticky top-0 max-w-md sm:max-w-5xl xl:max-w-7xl mx-auto p-4 rounded-full backdrop-blur-md shadow-xl">
+        <nav class="flex items-center justify-between px-6">
+            <img src="./assets/images/logo.png" alt="Logo" class="w-8 cursor-pointer" />
+            <div class="hidden md:flex items-center space-x-5">
+                <a href="#" class="text-whity hover:text-white">Home</a>
+                <a href="#" class="text-whity hover:text-white">Products</a>
+                <a href="#" class="text-whity hover:text-white">Deals & Offers</a>
+                <a href="#" class="text-whity hover:text-white">About Us</a>
+                <a href="#" class="text-whity hover:text-white">Contact</a>
+            </div>
+            <div class="md:flex items-center space-x-5 text-whity">
+                <i class="fa-solid fa-magnifying-glass hover:text-white"></i>
+                <i class="fa-solid fa-cart-shopping hover:text-white"></i>
+                <i class="fa-regular fa-user hover:text-white"></i>
+
+                <!-- mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden">
+                    <div id="menu-icon">
+                        <i  class="fa-solid fa-bars"></i>
+                    </div>
+                    <div id="close-icon" class="hidden">
+                        <i class="fa-regular fa-circle-xmark"></i>
+                    </div>
+                </button>
+            </div>
+        </nav>
+    </div>
+
+    <div id="mobile-menu" class="opacity-0 transform translate-x-full md:hidden fixed shadow-xl rounded-xl p-4 left-10 right-10 backdrop-blur-md transition-transform duration-500">
+        <div class="flex flex-col items-center space-y-5">
+            <a href="#" class="text-whity hover:text-white">Home</a>
+            <a href="#" class="text-whity hover:text-white">Products</a>
+            <a href="#" class="text-whity hover:text-white">Deals & Offers</a>
+            <a href="#" class="text-whity hover:text-white">About Us</a>
+            <a href="#" class="text-whity hover:text-white">Contact</a>
+        </div>
+    </div>
+    
+    
+
+    <h1 class="text-8xl">Hello There</h1>
+    <h1 class="text-8xl">Hello There</h1>
+    <h1 class="text-8xl">Hello There</h1>
+    <h1 class="text-8xl">Hello There</h1>
+    <h1 class="text-8xl">Hello There</h1>
+    <h1 class="text-8xl">Hello There</h1>
+    <h1 class="text-8xl">Hello There</h1>
+    <h1 class="text-8xl">Hello There</h1>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+    
+            mobileMenuButton.addEventListener('click', function () {
+                mobileMenu.classList.toggle('opacity-0');
+                mobileMenu.classList.toggle('translate-x-full');
+                menuIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+            });
+        });
+    </script>
+    
 </body>
 </html>
